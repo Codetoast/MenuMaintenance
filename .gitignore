@@ -7,3 +7,6 @@
 /ui/Bin
 /ui/Web.Debug.config
 /ui/Web.config
+/ui/node_modules
+/ui/dist
+/ui/bower_components/open-iconic

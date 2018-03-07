@@ -7,6 +7,6 @@ gulp.task('build', function () {
         .pipe(gulp.dest('./dist'));
     gulp.src('*.html')
         .pipe(gulp.dest('./dist'));
-    //gulp.src('bower_components/**/*')
-    //    .pipe(gulp.dest('./dist/bower_components/'));
+    gulp.src('bower_components/**/*')
+        .pipe(gulp.dest('./dist/bower_components/'));
 })

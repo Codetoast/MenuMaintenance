@@ -12,7 +12,7 @@ namespace backend
     public static class MenuItemsService
     {
         [FunctionName("MenuItemsService")]
-        public static async Task<IEnumerable<string>> Get([HttpTrigger(AuthorizationLevel.Function, "get", Route = "MenuItems")]HttpRequestMessage req, TraceWriter log)
+        public static async Task<IEnumerable<string>> Get([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "MenuItems")]HttpRequestMessage req, TraceWriter log)
         {
             log.Verbose("Requesting Menu Items.");
 

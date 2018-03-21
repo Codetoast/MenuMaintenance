@@ -5,9 +5,12 @@
     <title>McMichael's Menu Maintenance</title>
     <link href="bower_components/open-iconic/font/css/open-iconic.css" rel="stylesheet" type="text/css" />
     <link href="menu-maint-styles.css" rel="stylesheet" type="text/css" />
+    <script src="node_modules/vue/dist/vue.js" defer></script>
+    <script src="src/root-vm.js" defer></script>
 </head>
 <body>
-    <h3>Menu Items</h3>
+    <div id="root"><h3>{{ header }} {{ 2+2 }}</h3></div>
+    
     <ul>
         <li>Michael Burger<span class="oi main-menu-icon" data-glyph="trash" title="delete" aria-hidden="true"></span></li>
         <li>Fries<span class="oi main-menu-icon" data-glyph="trash" title="delete" aria-hidden="true"></span></li>

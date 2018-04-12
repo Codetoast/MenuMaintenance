@@ -10,3 +10,5 @@
 /ui/node_modules
 /ui/dist
 /ui/bower_components/open-iconic
+/backend.tests/obj
+/backend.tests/bin/Debug/netcoreapp2.0

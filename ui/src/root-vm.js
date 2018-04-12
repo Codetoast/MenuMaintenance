@@ -1,7 +1,10 @@
-﻿new Vue({
+﻿var Vue = require('vue/dist/vue.js');
+var App = require('./app.vue');
+
+new Vue({
     el: '#root',
-    data: {
-        header: 'Hello World'
+    components: {
+        app: App
     }
 }
 );

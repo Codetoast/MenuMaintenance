@@ -3,19 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <title>McMichael's Menu Maintenance</title>
-    <link href="bower_components/open-iconic/font/css/open-iconic.css" rel="stylesheet" type="text/css" />
-    <link href="menu-maint-styles.css" rel="stylesheet" type="text/css" />
-    <script src="node_modules/vue/dist/vue.js" defer></script>
-    <script src="src/root-vm.js" defer></script>
+    <link href="node_modules/open-iconic/font/css/open-iconic.css" rel="stylesheet" type="text/css" />
+    <script src="build.js" defer></script>
 </head>
 <body>
-    <div id="root"><h3>{{ header }} {{ 2+2 }}</h3></div>
-    
-    <ul>
-        <li>Michael Burger<span class="oi main-menu-icon" data-glyph="trash" title="delete" aria-hidden="true"></span></li>
-        <li>Fries<span class="oi main-menu-icon" data-glyph="trash" title="delete" aria-hidden="true"></span></li>
-        <li>Soda<span class="oi main-menu-icon" data-glyph="trash" title="delete" aria-hidden="true"></span></li>
-        <li>Steak<span class="oi main-menu-icon" data-glyph="trash" title="delete" aria-hidden="true"></span></li>
-    </ul>
+    <div id="root">
+        <app></app>
+    </div>
 </body>
 </html>

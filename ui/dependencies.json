@@ -1,5 +1,4 @@
 ﻿[
-  "./node_modules/vue/dist/*",
   "./node_modules/open-iconic/font/css/open-iconic.css",
   "./node_modules/open-iconic/font/fonts/*"
 ]

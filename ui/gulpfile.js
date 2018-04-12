@@ -7,7 +7,7 @@ var browserify = require('browserify');
 var babelify = require('babelify');
 var vueify = require('vueify');
 var source = require('vinyl-source-stream');
-var buffer = require('vinyl-buffer')
+var buffer = require('vinyl-buffer');
 
 
 gulp.task('html', function () {
@@ -20,7 +20,7 @@ gulp.task('dependencies', function () {
     dependencies = require('./dependencies.json');
     return gulp.src(dependencies)
         .pipe(gulp.dest((file) => {
-            return file.base.replace('node_modules', 'dist/node_modules')
+            return file.base.replace('node_modules', 'dist/node_modules');
         }));
 });
 
@@ -39,17 +39,17 @@ gulp.task('vue', function () {
 
 gulp.task('build', ['vue', 'html', 'dependencies'], function () {
 
-})
+});
 
 gulp.task('startup', function () {
     gulp.start('build');
     watch('src/**/*.(js|vue)', function () {
-        gulp.start('vue')
+        gulp.start('vue');
     });
     watch('index.html', function () {
-        gulp.start('html')
+        gulp.start('html');
     });
     watch('dependencies.json', function () {
-        gulp.start('dependencies')
+        gulp.start('dependencies');
     });
-})
+});

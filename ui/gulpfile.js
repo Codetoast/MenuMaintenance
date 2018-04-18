@@ -26,7 +26,7 @@ gulp.task('dependencies', function () {
 
 gulp.task('vue', function () {
     var b = browserify({
-        entries: globber.sync('./src/**/*.js'),
+        entries: globber.sync('./src/**/!(*.spec).js'),
         debug: true,
         transform: [vueify, babelify.configure({ presets: ["es2015"] })]
     });
@@ -43,7 +43,7 @@ gulp.task('build', ['vue', 'html', 'dependencies'], function () {
 
 gulp.task('startup', function () {
     gulp.start('build');
-    watch('src/**/*.(js|vue)', function () {
+    watch('src/**/!(*.spec).(js|vue)', function () {
         gulp.start('vue');
     });
     watch('index.html', function () {

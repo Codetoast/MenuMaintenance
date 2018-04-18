@@ -8,6 +8,8 @@
 </template>
 
 <script>
+    import menuItemService from './menu-item.service'
+
     export default {
         data() {
             return {
@@ -16,7 +18,9 @@
         },
         methods: {
             fetchItems: function () {
-                this.items = ['burger', 'milkshake', 'fries']
+                menuItemService.getMenuItems().then((result) => {
+                    this.items = result.data;
+                });
             }
         }
     }

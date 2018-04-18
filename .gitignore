@@ -13,3 +13,4 @@
 /backend.tests/obj
 /backend.tests/bin/Debug/netcoreapp2.0
 /ui/test_results
+/backend.tests/bin/Release

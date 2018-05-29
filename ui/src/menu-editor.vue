@@ -27,8 +27,12 @@
 </script>
 
 <style lang="less">
+    
+    @import "colors";
+
     .main-menu-icon {
         padding: 0 10px 0 10px;
         font-size: 12px;
+        color: @optumBlue3;
     }
 </style>

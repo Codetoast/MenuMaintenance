@@ -1,1 +1,0 @@
-﻿module.exports = window.globalConfig ? window.globalConfig : {};

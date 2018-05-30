@@ -1,8 +1,9 @@
-﻿let axios = require('axios/dist/axios.js')
+﻿let axios = require('axios/dist/axios.js');
+let config = require('./config.service.js');
 
 let menuItemService = {
     getMenuItems: function () {
-        return axios.get('https://menumaintenance.azurewebsites.net/api/MenuItems');
+        return axios.get(config.baseUrl + '/api/MenuItems');
     }
 }
 

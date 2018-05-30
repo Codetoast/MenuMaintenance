@@ -8,6 +8,10 @@ var babelify = require('babelify');
 var vueify = require('vueify');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
+var rename = require('gulp-rename');
+var _ = require('lodash');
+
+var environment = 'desktop';
 
 
 gulp.task('html', function () {
@@ -24,6 +28,14 @@ gulp.task('dependencies', function () {
         }));
 });
 
+gulp.task('config', function () {
+    gulp.src('./config/' + environment + '.js')
+        .pipe(rename('config.js'))
+        .pipe(gulp.dest('./dist'));
+    return gulp.src('./config/*')
+        .pipe(gulp.dest('./dist/config/'));
+});
+
 gulp.task('vue', function () {
     var b = browserify({
         entries: globber.sync('./src/**/!(*.spec).js'),
@@ -37,7 +49,7 @@ gulp.task('vue', function () {
         .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('build', ['vue', 'html', 'dependencies'], function () {
+gulp.task('build', ['vue', 'html', 'dependencies', 'config'], function () {
 
 });
 
